@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>CS101 Web</title>
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <h1>FabLab NE555 Calculator</h1>
+
+        <select id="bgs" onchange="changeBg()">
+            <option value="f">Frequency</option>
+            <option value="r">Ra, Rb</option>
+            <option value="d">Duty Cycle</option>
+        </select>
+    
+        <div id="freq-div" class="calc">
+            <p>Please enter Ra, Rb, C values:</p>
+            <input id="ra" type="number" class="txt" placeholder="Enter Ra value and choose units"/>
+            <select id="sra" class="sel">
+                <option value="1e0">Ohm</option>
+                <option value="1e3">K</option>
+                <option value="1e6">M</option>
+            </select>
+            <br/>
+            
+            <input id="rb" type="number" class="txt" placeholder="Enter Rb value and choose units"/>
+            <select id="srb" class="sel">
+                <option value="1e0">Ohm</option>
+                <option value="1e3">K</option>
+                <option value="1e6">M</option>
+            </select>
+            <br/>
+        
+            <input id="c" type="number" class="txt" placeholder="Enter Rb value"/>
+            <select id="src" class="sel">
+                <option value="1e-9">nF</option>
+                <option value="1e-6">uF</option>
+            </select>
+            <br/>
+
+            <button onclick="onButtonClick()" id="btn1">CALC f</button>
+            <div id="results"></div>
+        </div>
+        <div id="d-div" class="calc">
+            <p>Please enter Ra, Rb to calculate Duty Cycle:</p>
+            <input id="dra" type="number" class="txt" placeholder="Enter Ra value"/>
+            <select id="sdra" class="sel">
+                <option value="1e0">Ohm</option>
+                <option value="1e3">K</option>
+                <option value="1e6">M</option>
+            </select>
+            <br/>
+            
+            <input id="drb" type="number" class="txt" placeholder="Enter Rb value"/>
+            <select id="sdrb" class="sel">
+                <option value="1e0">Ohm</option>
+                <option value="1e3">K</option>
+                <option value="1e6">M</option>
+            </select>
+            <br/>
+
+            <button onclick="onButtonClickDuty()" id="btnD">CALC d</button>
+            <div id="results-duty"></div>
+        </div>
+    </body>
+
+
+    <script src="script.js">    
+    </script>
+
+</html>
