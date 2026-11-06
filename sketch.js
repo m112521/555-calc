@@ -2,14 +2,14 @@ let n = 10;
 let amp = 20;
 let slider;
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(500, 300);
   background(255, 120, 0);
   slider = createSlider(0, 100);
  }
  
  function draw() {
   background(255, 120, 0);
-   let period = width/n;
+   let period = 2*width/n;
    translate(0, height/2);
    let duty = slider.value();
 
