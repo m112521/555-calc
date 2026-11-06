@@ -1,8 +1,5 @@
 let n = 10;
 let amp = 20;
-let x1 = 0;
-let y1 = 0;
-//let duty = 50;
 let slider;
 function setup() {
   createCanvas(500, 500);
@@ -11,10 +8,13 @@ function setup() {
  }
  
  function draw() {
+  background(255, 120, 0);
    let period = width/n;
    translate(0, height/2);
    let duty = slider.value();
 
+   let x1 = 0;
+   let y1 = 0;
    for (let i = 0; i < n; i++) { 
     if (i % 2 == 0) {
       print(duty);
