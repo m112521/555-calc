@@ -5,6 +5,7 @@
 
 let x = 10;
 let y = 2;
+let dc = 0;
 
 function calcLunch(items) {
     let lunchCost = 0;
@@ -47,6 +48,7 @@ function onButtonClickDuty() {
     console.log(`NE555 Output signal Duty Cycle: ${d} %`);
 
     dresults.textContent = `${d} %`;
+    dc = d;
 }
 
 
